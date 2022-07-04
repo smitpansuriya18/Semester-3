@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Calculator</title>
+</head>
+<body>
+	<table border="" align="center">
+		<tr>
+			<td colspan="4">
+				<input type="text" id="text" onclick="InOut()"></button></td>
+		</tr>
+		<tr>
+			<td colspan="3" align="right"><button onclick="Input(this)"><-</button></td>
+			<td align="right"><button onclick="Clear()">AC</button></td>
+		</tr>
+		<tr>
+			<td align="center"><button onclick="Input(this)">7</button></td>
+			<td align="center"><button onclick="Input(this)">8</button></td>
+			<td align="center"><button onclick="Input(this)">9</button></td>
+			<td align="center"><button onclick="Input(this)">*</button></td>
+		</tr>
+		<tr>
+			<td align="center"><button onclick="Input(this)">4</button></td>
+			<td align="center"><button onclick="Input(this)">5</button></td>
+			<td align="center"><button onclick="Input(this)">6</button></td>
+			<td align="center"><button onclick="Input(this)">/</button></td>
+		</tr>
+		<tr>
+			<td align="center"><button onclick="Input(this)">1</button></td>
+			<td align="center"><button onclick="Input(this)">2</button></td>
+			<td align="center"><button onclick="Input(this)">3</button></td>
+			<td align="center"><button onclick="Input(this)">+</button></td>
+		</tr>
+		<tr>
+			<td align="center"><button onclick="Input(this)">0</button></td>
+			<td align="center"><button onclick="Output()">=</button></td>
+			<td align="center"><button onclick="Input(this)">.</button></td>
+			
+			<td align="center"><button onclick="Input(this)">-</button></td>
+		</tr>
+	</table>
+	<script type="text/javascript">
+		
+		function Input(n){
+			a=document.getElementById("text");
+			a.value+=n.innerHTML;
+		}
+		function Output(){
+			exp=document.getElementById("text").value;
+
+			if (exp) {
+				document.getElementById("text").value=eval(exp);
+			}
+		}
+		function Clear(){
+			
+		}
+	</script>
+</body>
+</html>
